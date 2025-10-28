@@ -1,5 +1,7 @@
 package framework.core.data.header;
 
+import java.util.Objects;
+
 /**
  * TCP/IP 에서 사용되는 공통 헤더를 나타내는 추상 클래스입니다.
  * <p>
@@ -14,7 +16,7 @@ public abstract class Header {
     }
 
     protected Header(byte[] bytes) {
-        this.bytes = bytes;
+        this.bytes = Objects.requireNonNull(bytes, "header bytes cannot be null");
     }
 
     public byte[] getBytes() {

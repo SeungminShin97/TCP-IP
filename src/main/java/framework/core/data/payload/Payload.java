@@ -1,5 +1,7 @@
 package framework.core.data.payload;
 
+import java.util.Objects;
+
 /**
  * TCP/IP 에서 사용되는 페이로드를 나타내는 클래스입니다.
  * <p>
@@ -9,7 +11,7 @@ public final class Payload {
     private byte[] bytes;
 
     public Payload(byte[] bytes) {
-        this.bytes = bytes;
+        this.bytes = Objects.requireNonNull(bytes, "payload bytes cannot be null");
     }
 
     public byte[] getBytes() {
