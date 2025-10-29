@@ -18,4 +18,12 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    exclude '**/local/**'
+}
+
+tasks.register('localTest', Test) {
+    useJUnitPlatform()
+    include '**/local/**'
+    description = 'Run local-only integration tests (e.g. Pcap or real NIC tests)'
+    group = 'verification'
 }
