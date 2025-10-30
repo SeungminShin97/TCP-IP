@@ -1,4 +1,4 @@
-$IMAGE_NAME = "pcap-env"
+$IMAGE_NAME = "tcp-ip"
 
 docker run --rm -it `
   --net=host `

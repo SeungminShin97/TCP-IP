@@ -5,6 +5,4 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY . .
-
-CMD ["java", "-jar", "tcpip.jar"]
+CMD ["/bin/bash"]
