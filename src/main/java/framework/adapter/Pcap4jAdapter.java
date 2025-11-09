@@ -74,6 +74,7 @@ public class Pcap4jAdapter {
             while(!Thread.currentThread().isInterrupted()) {
                 Packet packet = handle.getNextPacketEx(); //blocking method
                 if(packet != null) {
+                    packet.getRawData();
                     //TODO: rawData 처리 로직 추가
                 }
             }
