@@ -28,3 +28,19 @@ tasks.register('localTest', Test) {
     description = 'Run local-only integration tests (e.g. Pcap or real NIC tests)'
     group = 'verification'
 }
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    archiveBaseName = 'tcp-ip'  // 빌드 시 파일 이름
+    archiveVersion = ''
+
+    // entry point 설정
+    manifest {
+        attributes(
+                'Main-Class': 'Application'
+        )
+    }
+}
