@@ -9,6 +9,7 @@ import java.util.concurrent.RejectedExecutionException;
 
 import framework.core.data.Chunk;
 import framework.core.data.header.EmptyHeader;
+import framework.core.data.header.Header;
 
 /**
  * TCP/IP 모델의 계층을 나타내는 추상 클래스입니다.
